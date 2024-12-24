@@ -4,8 +4,8 @@
 
 | **Week** | **Task Number** | **Task Name**                                   | **Time Estimate per Task** | **Status** | **Total Time Estimate** |
 |----------|------------------|-------------------------------------------------|----------------------------|------------|-------------------------|
-| Week 1  | 0                | Documentation                                   | 3 hours                    |            |                         |
-|          | 1                | Betty checks                                    | 2-4 hours                  |            |                         |
+| Week 1  | 0                | Documentation                                   | 5 hours                    |  still going          |                         |
+|          | 1                | Betty checks                                    | 2-4 hours                  | didn't catch the task purpose          |                         |
 |          | 2                | Write UNIX interpreter                          | 10-15 hours                |            |                         |
 |          | 3                | Handle command-line args                        | 4-6 hours                  |            | **~25 hours**          |
 |----------|------------------|-------------------------------------------------|----------------------------|------------|-------------------------|
