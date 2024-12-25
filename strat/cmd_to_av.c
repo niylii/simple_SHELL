@@ -2,7 +2,9 @@
 #include <string.h>
 
 /**
- *  function that splits a string and returns an array of each word of the string.
+ * split_it - function that splits a string
+ * @str: the string to split
+ * Return: the spleted string
  */
 
 char *split_it(char *str)
