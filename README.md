@@ -4,9 +4,9 @@
 
 | **Week** | **Task Number** | **Task Name**                                   | **Time Estimate per Task** | **Status** | **Total Time Estimate** |
 |----------|------------------|-------------------------------------------------|----------------------------|------------|-------------------------|
-| Week 1  | 0                | Documentation                                   | 3 hours                    |            |                         |
-|          | 1                | Betty checks                                    | 2-4 hours                  |            |                         |
-|          | 2                | Write UNIX interpreter                          | 10-15 hours                |            |                         |
+| Week 1  | 0                | Documentation                                   | (a lot)                    |  done          |                         |
+|          | 1                | Betty checks                                    | 2-4 hours                  |  didn't get the task purpose          |                         |
+|          | 2                | Write UNIX interpreter                          | 10-15 hours                |  started          |                         |
 |          | 3                | Handle command-line args                        | 4-6 hours                  |            | **~25 hours**          |
 |----------|------------------|-------------------------------------------------|----------------------------|------------|-------------------------|
 | Week 2  | 4                | PATH handling                                   | 8-12 hours                 |            |                         |
@@ -33,11 +33,11 @@
 - [ ] **Who invented the B programming language (the direct predecessor to the C programming language)?**
 - [ ] **Who is Ken Thompson?**
 - [ ] **How does a shell work?**
-- [ ] **What is a PID and a PPID?**
+- [x] **What is a PID and a PPID?**
 - [ ] **How to manipulate the environment of the current process?**
-- [ ] **What is the difference between a function and a system call?**
-- [ ] **How to create processes?**
-- [ ] **What are the three prototypes of main?**
+- [x] **What is the difference between a function and a system call?**
+- [x] **How to create processes?**
+- [x] **What are the three prototypes of main?**
 - [ ] **How does the shell use the PATH to find the programs?**
 - [ ] **How to execute another program with the execve system call?**
 - [ ] **How to suspend the execution of a process until one of its children terminates?**
