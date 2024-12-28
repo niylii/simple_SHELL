@@ -10,6 +10,7 @@
 #include <sys/wait.h>
 
 void simple_shell(void);
-
 void e_of(char *);
+
+char *str_cspn(char *);
 #endif
