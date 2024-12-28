@@ -19,26 +19,28 @@ void simple_shell(void)
 
 	while (1)
 	{
-		write(1, "$ ", 2);
+		write(STDIN_FILENO, "$ ", 2);
 		cmd_stat = getline(&cmd, &n, stdin);		
 		if (cmd_stat == -1)
 		{
 			e_of(cmd);
-			perror("no command is inserted");
+			perror("getline failed");
 		}
 		cmd = str_cspn(cmd);
 		pid = fork();
+		if (pid < 0)
+			perror("fork failed");
 		if (pid == 0)
 		{
 			char *args[] = {cmd, NULL};
 			if (execve(cmd, args, environ) == -1)
+			{
 				perror("execution faild!");
-			exit(1);
+				exit(EXIT_FAILURE);
+			}
 		}
-		if (pid <= 0)
-			perror("process not created");
 		if (pid > 0)
-			wait(&exec_stat);
+			waitpid(pid ,&exec_stat, 0);
 		}
 		free(cmd);
 }
