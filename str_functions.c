@@ -28,6 +28,11 @@ char *str_cspn(char *str)
 	st = str;
 	while (str[i] && str[i] != '\n')
 		i++;
-	str[i] = '\0';
+	if (str[i] == '\n')
+		str[i] = '\0';
 	return (st);
 }
+
+/**
+ *
+ */
