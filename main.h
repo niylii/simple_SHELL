@@ -11,6 +11,6 @@
 
 void simple_shell(void);
 void e_of(char *);
-
+char *tokenize_pro_name(char **);
 char *str_cspn(char *);
 #endif
