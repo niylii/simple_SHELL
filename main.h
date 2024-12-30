@@ -10,7 +10,8 @@
 #include <sys/wait.h>
 
 void simple_shell(void);
+void simple_shell02(void);
 void e_of(char *);
-char *tokenize_pro_name(char **);
+char *tokenize_pro_name(char **, char **);
 char *str_cspn(char *);
 #endif
