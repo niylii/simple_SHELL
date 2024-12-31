@@ -34,5 +34,42 @@ char *str_cspn(char *str)
 }
 
 /**
- *
+ * str_ncpm - function that compares two strings
+ * @s1: pointer to the 1st string (environment variable)
+ * @s2: pointer to the 2nd string (the one fron envi)
+ * Return: 0 if there is a match -1 otherwise
  */
+
+int str_ncpm(char *s1, char *s2)
+{
+	int i = 0;
+
+	while (s1[i] && s2[i] != '=')
+	{
+		if (s1[i] != s2[i])
+			return (-1);
+		i++;
+	}
+	if (s1[i] == '\0' && s2[i] == '=')
+		return (0);
+	return (-1);
+}
+
+/**
+ * str_find - function that looks for 'character'
+ *		 then returns the string after it
+ * @str: the string to look in
+ * @dil: is a character
+ * Return: the string after the 'character'
+ */
+
+char *str_find(char *str, char dil)
+{
+	int i = 0;
+
+	while (str[i] && str[i] != dil)
+		i++;
+	if (str[i] == '\0')
+		return (NULL);
+	return (&str[i + 1]);
+}
