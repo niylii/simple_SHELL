@@ -7,9 +7,9 @@
 | Week 1  | 0                | Documentation                                   | (a lot)                    |  done          |                         |
 |          | 1                | Betty checks                                    | 2-4 hours                  |  didn't get the task purpose          |                         |
 |          | 2                | Write UNIX interpreter                          | 10-15 hours                |  mostly done (error handling)         |                         |
-|          | 3                | Handle command-line args                        | 4-6 hours                  |            | **~25 hours**          |
+|          | 3                | Handle command-line args                        | 4-6 hours                  |  done         | **~25 hours**          |
 |----------|------------------|-------------------------------------------------|----------------------------|------------|-------------------------|
-| Week 2  | 4                | PATH handling                                   | 8-12 hours                 |            |                         |
+| Week 2  | 4                | PATH handling                                   | 8-12 hours                 |    started     |                         |
 |          | 5                | Exit built-in                                   | 4-6 hours                  |            |                         |
 |          | 6                | env built-in                                    | 6-8 hours                  |            |                         |
 |          | 7                | Write getline                                   | 10-15 hours                |            | **~35 hours**          |
@@ -34,7 +34,7 @@
 - [x] **Who is Ken Thompson?**
 - [ ] **How does a shell work?**
 - [x] **What is a PID and a PPID?**
-- [ ] **How to manipulate the environment of the current process?**
+- [x] **How to manipulate the environment of the current process?**
 - [x] **What is the difference between a function and a system call?**
 - [x] **How to create processes?**
 - [x] **What are the three prototypes of main?**
