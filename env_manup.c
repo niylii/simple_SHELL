@@ -51,7 +51,7 @@ char *cmd_type(char *pro)
 	char *current;
 	static char cmd_path[1024];
 
-	path = getenv("PATH");
+	path = get_env("PATH");
 	if (str_find(pro, '/'))
 		return ((access(pro, X_OK) == 0) ? pro : NULL);
 	if (!path)
