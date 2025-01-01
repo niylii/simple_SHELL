@@ -37,3 +37,32 @@ char *tokenize_pro_name(char **str, char **args)
 	args[i] = NULL;
 	return (args[0]);
 }
+
+/**
+ * exec_process - function that handle the execution process
+ * @cmd_path: the command path
+ * @args: arguments with the command
+ * @cmd: original command
+ * @exec_stat: the execcution status
+ * @pid: the process id
+ */
+
+void exec_process(char *cmd_path, char **args, int exec_stat, char *cmd, pid_t pid)
+{
+	pid = fork();
+	if (pid < 0)
+	{
+		perror("fork failed");
+	}
+	if (pid == 0)
+	{
+		if (execve(cmd_path, args, environ) == -1)
+		{
+			perror("execution failed");
+			free(cmd);
+			exit(EXIT_FAILURE);
+		}
+	}
+	if (pid > 0)
+		waitpid(pid, &exec_stat, 0);
+}
