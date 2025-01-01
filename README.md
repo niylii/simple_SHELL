@@ -9,8 +9,8 @@
 |          | 2                | Write UNIX interpreter                          | 10-15 hours                |  mostly done (error handling)         |                         |
 |          | 3                | Handle command-line args                        | 4-6 hours                  |  done         | **~25 hours**          |
 |----------|------------------|-------------------------------------------------|----------------------------|------------|-------------------------|
-| Week 2  | 4                | PATH handling                                   | 8-12 hours                 |    started     |                         |
-|          | 5                | Exit built-in                                   | 4-6 hours                  |            |                         |
+| Week 2  | 4                | PATH handling                                   | 8-12 hours                 |   done (used sfprintf lol)     |                         |
+|          | 5                | Exit built-in                                   | 4-6 hours                  |   started         |                         |
 |          | 6                | env built-in                                    | 6-8 hours                  |            |                         |
 |          | 7                | Write getline                                   | 10-15 hours                |            | **~35 hours**          |
 |----------|------------------|-------------------------------------------------|----------------------------|------------|-------------------------|
@@ -32,7 +32,7 @@
 - [x] **Who wrote the first version of the UNIX shell?**
 - [x] **Who invented the B programming language (the direct predecessor to the C programming language)?**
 - [x] **Who is Ken Thompson?**
-- [ ] **How does a shell work?**
+- [x] **How does a shell work?**
 - [x] **What is a PID and a PPID?**
 - [x] **How to manipulate the environment of the current process?**
 - [x] **What is the difference between a function and a system call?**
