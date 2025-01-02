@@ -88,7 +88,7 @@ int str_cpm(char *s1, char *s2)
 
 	if (str_len(s2) != str_len(s1))
 		return (-1);
-	else
+	if (str_len(s2) == str_len(s1))
 	{
 		while ((s1[i] && s2[i]) && (s1[i] == s2[i]))
 			i++;
