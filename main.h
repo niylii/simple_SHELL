@@ -16,11 +16,14 @@ extern char **environ;
 void simple_shell(void);
 void simple_shell02(void);
 void simple_shell03(void);
+void simple_shell04(void);
 
 /**for certen cases**/
 void e_of(char *);
 void getline_check(ssize_t stat, char *cmd);
-void exec_process(char *cmd_path, char **args, int exec_stat, char *cmd, pid_t pid);
+void exec_process(char *cmd_path, char **args, int exec_stat,
+		char *cmd, pid_t pid);
+void exit_cmd_check(char *);
 char *tokenize_pro_name(char **, char **);
 
 /**for environement variables**/
@@ -33,4 +36,5 @@ char *cmd_type(char *pro);
 char *str_find(char *str, char dil);
 char *str_cspn(char *);
 int str_ncpm(char *s1, char *s2);
+int str_cpm(char *s1, char *s2);
 #endif
