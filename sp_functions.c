@@ -66,3 +66,22 @@ void exec_process(char *cmd_path, char **args, int exec_stat, char *cmd, pid_t p
 	if (pid > 0)
 		waitpid(pid, &exec_stat, 0);
 }
+
+/**
+ * exit_cmd_check - is a function that checks if the command is 
+ *		the "exit" command
+ * @cmd : the command to check
+ */
+void exit_cmd_check(char *cmd)
+{
+	int ex_it;
+
+	if (cmd == NULL)
+		return;
+	ex_it = str_cpm(cmd, "exit");
+	if (ex_it == 0)
+	{
+		free(cmd);
+		exit(0);
+	}
+}
