@@ -1,11 +1,7 @@
 #include "main.h"
-/**
- * @environ - 
- */
 
-extern char **environ;
 /**
- * prompt - function that shows the prompt and
+ * simple_shell02 - function that shows the prompt and
  *	takes the command then execute it
  */
 
@@ -20,7 +16,7 @@ void simple_shell02(void)
 	while (1)
 	{
 		write(STDIN_FILENO, "$ ", 2);
-		cmd_stat = getline(&cmd, &n, stdin);		
+		cmd_stat = getline(&cmd, &n, stdin);
 		if (cmd_stat == -1)
 		{
 			e_of(cmd);
@@ -40,7 +36,7 @@ void simple_shell02(void)
 			}
 		}
 		if (pid > 0)
-			waitpid(pid ,&exec_stat, 0);
-		}
-		free(cmd);
+			waitpid(pid, &exec_stat, 0);
+	}
+	free(cmd);
 }
