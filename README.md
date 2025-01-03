@@ -10,9 +10,9 @@
 |          | 3                | Handle command-line args                        | 4-6 hours                  |  done         | **~25 hours**          |
 |----------|------------------|-------------------------------------------------|----------------------------|------------|-------------------------|
 | Week 2  | 4                | PATH handling                                   | 8-12 hours                 |   done (used sfprintf lol)     |                         |
-|          | 5                | Exit built-in                                   | 4-6 hours                  |   started         |                         |
-|          | 6                | env built-in                                    | 6-8 hours                  |            |                         |
-|          | 7                | Write getline                                   | 10-15 hours                |            | **~35 hours**          |
+|          | 5                | Exit built-in                                   | 4-6 hours                  |  done         |                         |
+|          | 6                | env built-in                                    | 6-8 hours                  |     done      |                         |
+|          | 7                | Write getline                                   | 10-15 hours                |     started       | **~35 hours**          |
 |----------|------------------|-------------------------------------------------|----------------------------|------------|-------------------------|
 | Week 3  | 8                | No strtok                                       | 8-10 hours                 |            |                         |
 |          | 9                | Exit args                                       | 6-8 hours                  |            |                         |
@@ -26,7 +26,7 @@
 |          | 16               | Comments                                        | 4-6 hours                  |            |                         |
 |          | 17               | File input                                      | 6-10 hours                 |            | **~40 hours**          |
 |----------|------------------|-------------------------------------------------|----------------------------|------------|-------------------------|
-| **Total**|                  |                                                 |                            |            | **~178 hours**         | 
+|**Total**|                  |                                                 |                            |            | **~178 hours**       | 
 
 - [x] **Who designed and implemented the original Unix operating system?**
 - [x] **Who wrote the first version of the UNIX shell?**
