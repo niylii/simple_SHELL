@@ -69,3 +69,22 @@ char *cmd_type(char *pro)
 	}
 	return (NULL);
 }
+
+int env_cmd_check(char *cmd)
+{
+	char **env = environ;
+	size_t len;
+
+	if (str_cpm("env", cmd) == 0)
+	{
+		while (*env)
+		{
+			len = str_len(*env);
+			write(STDOUT_FILENO, *env, len);
+			write(STDOUT_FILENO, "\n", 1);
+			env++;
+		}
+		return (0);
+	}
+	return (-1);
+}
