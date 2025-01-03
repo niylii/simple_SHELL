@@ -17,6 +17,7 @@ void simple_shell(void);
 void simple_shell02(void);
 void simple_shell03(void);
 void simple_shell04(void);
+void simple_shell10(void);
 
 /**for certen cases**/
 void e_of(char *);
@@ -28,6 +29,7 @@ char *tokenize_pro_name(char **, char **);
 
 /**for environement variables**/
 int env_exists(const char *name);
+int env_cmd_check(char *);
 char *get_env(const char *name);
 char *cmd_type(char *pro);
 
@@ -37,4 +39,5 @@ char *str_find(char *str, char dil);
 char *str_cspn(char *);
 int str_ncpm(char *s1, char *s2);
 int str_cpm(char *s1, char *s2);
+int str_len(char *);
 #endif
