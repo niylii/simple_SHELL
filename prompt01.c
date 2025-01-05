@@ -8,7 +8,6 @@
 void simple_shell(void)
 {
 	char *cmd = NULL;
-	char *argsp[];
 	int exec_stat;
 	size_t n = 0;
 	ssize_t cmd_stat;
@@ -29,7 +28,7 @@ void simple_shell(void)
 			perror("fork failed");
 		if (pid == 0)
 		{
-			args[] = {cmd, NULL};
+			char *args[] = {cmd, NULL};
 			if (execve(cmd, args, environ) == -1)
 			{
 				perror("execution faild!");
