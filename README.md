@@ -12,9 +12,9 @@
 | Week 2  | 4                | PATH handling                                   | 8-12 hours                 |   done (used sfprintf lol)     |                         |
 |          | 5                | Exit built-in                                   | 4-6 hours                  |  done         |                         |
 |          | 6                | env built-in                                    | 6-8 hours                  |     done      |                         |
-|          | 7                | Write getline                                   | 10-15 hours                |     started       | **~35 hours**          |
+|          | 7                | Write getline                                   | 10-15 hours                |     done      | **~35 hours**       
 |----------|------------------|-------------------------------------------------|----------------------------|------------|-------------------------|
-| Week 3  | 8                | No strtok                                       | 8-10 hours                 |            |                         |
+| Week 3  | 8                | No strtok                                       | 8-10 hours                 |  started          |                         |
 |          | 9                | Exit args                                       | 6-8 hours                  |            |                         |
 |          | 10               | setenv/unsetenv                                 | 10-15 hours                |            |                         |
 |          | 11               | cd built-in                                     | 15-20 hours                |            |                         |
