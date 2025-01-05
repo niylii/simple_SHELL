@@ -18,23 +18,28 @@ void simple_shell02(void);
 void simple_shell03(void);
 void simple_shell04(void);
 void simple_shell10(void);
+void simple_shell011(void);
+
+/**for existance/working check**/
+void getline_check(ssize_t stat, char *cmd);
+void exit_cmd_check(char *);
+int env_cmd_check(char *);
 
 /**for certen cases**/
 void e_of(char *);
-void getline_check(ssize_t stat, char *cmd);
 void exec_process(char *cmd_path, char **args, int exec_stat,
 		char *cmd, pid_t pid);
-void exit_cmd_check(char *);
-char *tokenize_pro_name(char **, char **);
 
 /**for environement variables**/
 int env_exists(const char *name);
-int env_cmd_check(char *);
 char *get_env(const char *name);
 char *cmd_type(char *pro);
 
-/****/
+/**for my version of std library functions**/
+ssize_t get_line(char **line, size_t *n, int fd);
+
 /**for strings manupilation**/
+char *tokenize_pro_name(char **, char **);
 char *str_find(char *str, char dil);
 char *str_cspn(char *);
 int str_ncpm(char *s1, char *s2);
