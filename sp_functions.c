@@ -73,16 +73,18 @@ void exec_process(char *cmd_path, char **args, int exec_stat,
  *		the "exit" command
  * @cmd : the command to check
  */
-void exit_cmd_check(char *cmd)
+void exit_cmd_check(char *cmd, char **stat)
 {
-	int ex_it;
+	int ex_it, exit_stat = 0;
 
 	if (cmd == NULL)
 		return;
 	ex_it = str_cpm(cmd, "exit");
 	if (ex_it == 0)
 	{
+		if (stat[1] != NULL)
+			exit_stat = a_to_i(stat[1]);
 		free(cmd);
-		exit(0);
+		exit(exit_stat);
 	}
 }
