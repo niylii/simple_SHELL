@@ -30,6 +30,8 @@ int env_cmd_check(char *);
 void e_of(char *);
 void exec_process(char *cmd_path, char **args, int exec_stat,
 		char *cmd, pid_t pid);
+static ssize_t read_into(int fd, char *buff, ssize_t *bytes,
+		ssize_t * pose);
 
 /**for environement variables**/
 int env_exists(const char *name);
