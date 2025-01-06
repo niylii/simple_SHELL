@@ -14,8 +14,8 @@
 |          | 6                | env built-in                                    | 6-8 hours                  |     done      |                         |
 |          | 7                | Write getline                                   | 10-15 hours                |     done      | **~35 hours**       
 |----------|------------------|-------------------------------------------------|----------------------------|------------|-------------------------|
-| Week 3  | 8                | No strtok                                       | 8-10 hours                 |  started          |                         |
-|          | 9                | Exit args                                       | 6-8 hours                  |            |                         |
+| Week 3  | 8                | No strtok                                       | 8-10 hours                 |  done          |                         |
+|          | 9                | Exit args                                       | 6-8 hours                  |   done       |                         |
 |          | 10               | setenv/unsetenv                                 | 10-15 hours                |            |                         |
 |          | 11               | cd built-in                                     | 15-20 hours                |            |                         |
 |          | 12               | Command separator                               | 8-10 hours                 |            | **~45 hours**          |
