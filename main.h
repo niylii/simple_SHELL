@@ -19,6 +19,7 @@ void simple_shell03(void);
 void simple_shell04(void);
 void simple_shell10(void);
 void simple_shell011(void);
+void simple_shell021(void);
 
 /**for existance/working check**/
 void getline_check(ssize_t stat, char *cmd);
@@ -42,6 +43,8 @@ ssize_t get_line(char **line, size_t *n, int fd);
 char *tokenize_pro_name(char **, char **);
 char *str_find(char *str, char dil);
 char *str_cspn(char *);
+char *str_tok(char *str, const char *dil);
+char *str_pbrk(char *str, const char *dil);
 int str_ncpm(char *s1, char *s2);
 int str_cpm(char *s1, char *s2);
 int str_len(char *);
