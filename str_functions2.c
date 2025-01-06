@@ -46,7 +46,7 @@ char *str_tok(char *str, const char *dil)
  *		NULL if it nothing is found
  */
 
-char *str_pbrk(char *str,const char *dil)
+char *str_pbrk(char *str, const char *dil)
 {
 	int i, j;
 
@@ -59,4 +59,29 @@ char *str_pbrk(char *str,const char *dil)
 		}
 	}
 	return (NULL);
+}
+
+/**
+ * a_to_i - function that transforms a character to an integer
+ * @str: the number as characters
+ * Return: the number as integer
+ */
+
+int a_to_i(char *str)
+{
+	int i = 0, nb = 0, sng = 1;
+
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n')
+		i++;
+	if (str[i] == '-')
+	{
+		sng = -1;
+		i++;
+	}
+	while (str[i] && ('0' <= str[i] && str[i] <= '9'))
+	{
+		nb = (nb * 10) + (str[i] - '0');
+		i++;
+	}
+	return (nb * sng);
 }
