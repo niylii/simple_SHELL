@@ -28,11 +28,11 @@ char *tokenize_pro_name(char **str, char **args)
 	char *token, *buff;
 	int i = 0;
 
-	token = strtok(*str, " ");
+	token = str_tok(*str, " ");
 	while (token)
 	{
 		args[i++] = token;
-		token = strtok(NULL, " ");
+		token = str_tok(NULL, " ");
 	}
 	args[i] = NULL;
 	return (args[0]);
@@ -47,7 +47,8 @@ char *tokenize_pro_name(char **str, char **args)
  * @pid: the process id
  */
 
-void exec_process(char *cmd_path, char **args, int exec_stat, char *cmd, pid_t pid)
+void exec_process(char *cmd_path, char **args, int exec_stat,
+		char *cmd, pid_t pid)
 {
 	pid = fork();
 	if (pid < 0)
@@ -68,7 +69,7 @@ void exec_process(char *cmd_path, char **args, int exec_stat, char *cmd, pid_t p
 }
 
 /**
- * exit_cmd_check - is a function that checks if the command is 
+ * exit_cmd_check - is a function that checks if the command is
  *		the "exit" command
  * @cmd : the command to check
  */
