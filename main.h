@@ -20,10 +20,11 @@ void simple_shell04(void);
 void simple_shell10(void);
 void simple_shell011(void);
 void simple_shell021(void);
+void simple_shell041(void);
 
 /**for existance/working check**/
 void getline_check(ssize_t stat, char *cmd);
-void exit_cmd_check(char *);
+void exit_cmd_check(char *, char **);
 int env_cmd_check(char *);
 
 /**for certen cases**/
@@ -31,7 +32,7 @@ void e_of(char *);
 void exec_process(char *cmd_path, char **args, int exec_stat,
 		char *cmd, pid_t pid);
 static ssize_t read_into(int fd, char *buff, ssize_t *bytes,
-		ssize_t * pose);
+		ssize_t *pose);
 
 /**for environement variables**/
 int env_exists(const char *name);
@@ -40,6 +41,7 @@ char *cmd_type(char *pro);
 
 /**for my version of std library functions**/
 ssize_t get_line(char **line, size_t *n, int fd);
+int a_to_i(char *);
 
 /**for strings manupilation**/
 char *tokenize_pro_name(char **, char **);
@@ -50,4 +52,5 @@ char *str_pbrk(char *str, const char *dil);
 int str_ncpm(char *s1, char *s2);
 int str_cpm(char *s1, char *s2);
 int str_len(char *);
+
 #endif
