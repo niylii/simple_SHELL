@@ -24,13 +24,12 @@ void simple_shell041(void);
 
 /**for existance/working check**/
 void getline_check(ssize_t stat, char *cmd);
-void exit_cmd_check(char *, char **);
+int exit_cmd_check(char *, char **);
 int env_cmd_check(char *);
 
 /**for certen cases**/
 void e_of(char *);
-void exec_process(char *cmd_path, char **args, int exec_stat,
-		char *cmd, pid_t pid);
+void exec_process(char *cmd_path, char **args, int *exec_stat);
 static ssize_t read_into(int fd, char *buff, ssize_t *bytes,
 		ssize_t *pose);
 
