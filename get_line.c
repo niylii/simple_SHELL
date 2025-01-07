@@ -46,7 +46,7 @@ ssize_t get_line(char **line, size_t *n, int fd)
 	static char buff[1024];
 	static ssize_t bytes = 0, pose = 0;
 	ssize_t len = 0;
-	char *line_;
+	char *line_ = NULL;
 
 	*line = line_;
 	if (*n == 0 || line_ == NULL)
@@ -69,7 +69,10 @@ ssize_t get_line(char **line, size_t *n, int fd)
 			*n *= 2;
 			line_ = realloc(*line, *n);
 			if (!line_)
+			{
+				free(*line);
 				return (-1);
+			}
 			*line = line_;
 		}
 		line_[len++] = buff[pose++];
