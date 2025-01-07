@@ -13,7 +13,6 @@ void e_of(char *file)
 		write(STDOUT_FILENO, "\0", 1);
 		exit(EXIT_SUCCESS);
 	}
-	free(file);
 }
 
 /**
@@ -47,25 +46,26 @@ char *tokenize_pro_name(char **str, char **args)
  * @pid: the process id
  */
 
-void exec_process(char *cmd_path, char **args, int exec_stat,
-		char *cmd, pid_t pid)
+void exec_process(char *cmd_path, char **args, int *exec_stat)
 {
+	pid_t pid;
+
 	pid = fork();
 	if (pid < 0)
 	{
 		perror("fork failed");
+		exit(EXIT_FAILURE);
 	}
 	if (pid == 0)
 	{
 		if (execve(cmd_path, args, environ) == -1)
 		{
 			perror("execution failed");
-			free(cmd);
 			exit(EXIT_FAILURE);
 		}
 	}
 	if (pid > 0)
-		waitpid(pid, &exec_stat, 0);
+		waitpid(pid, exec_stat, 0);
 }
 
 /**
@@ -73,12 +73,12 @@ void exec_process(char *cmd_path, char **args, int exec_stat,
  *		the "exit" command
  * @cmd : the command to check
  */
-void exit_cmd_check(char *cmd, char **stat)
+int exit_cmd_check(char *cmd, char **stat)
 {
 	int ex_it, exit_stat = 0;
 
 	if (cmd == NULL)
-		return;
+		return (0);
 	ex_it = str_cpm(cmd, "exit");
 	if (ex_it == 0)
 	{
@@ -87,4 +87,5 @@ void exit_cmd_check(char *cmd, char **stat)
 		free(cmd);
 		exit(exit_stat);
 	}
+	return (0);
 }
