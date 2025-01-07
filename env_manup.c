@@ -56,7 +56,7 @@ char *cmd_type(char *pro)
 		return ((access(pro, X_OK) == 0) ? pro : NULL);
 	if (!path)
 	{
-		write(STDERR_FILENO, "PATH not found\n", 15);
+		write(STDERR_FILENO, "PATH is empty\n", 14);
 		return (NULL);
 	}
 	current = strtok(path, ":");
