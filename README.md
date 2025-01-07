@@ -42,3 +42,7 @@
 - [x] **How to execute another program with the execve system call?**
 - [x] **How to suspend the execution of a process until one of its children terminates?**
 - [x] **What is EOF / “end-of-file”?**
+
+**EDGE CASES TO HANDLE or bugs idk:**
+- [ ] space as command
+- [ ] command after non existant command
