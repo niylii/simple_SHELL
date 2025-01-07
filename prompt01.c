@@ -4,7 +4,6 @@
  * simple_shell - function that shows the prompt and
  *	takes the command then execute it (v0.1)
  */
-
 void simple_shell(void)
 {
 	char *cmd = NULL;
