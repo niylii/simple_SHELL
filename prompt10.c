@@ -7,7 +7,7 @@
 
 void simple_shell10(void)
 {
-	char *cmd = NULL, *args[10];
+	char *cmd = NULL, *args[1024];
 	char *cmd_path, *pro_name;
 	int exec_stat;
 	size_t n = 0;
@@ -28,6 +28,18 @@ void simple_shell10(void)
 		if (is_space(cmd) == 0)
 		{
 			write(STDERR_FILENO, "Invalid command: only whitespaces\n", 34);
+			continue;
+		}
+		if (str_cpm(pro_name, "setenv") == 0)
+		{
+			if (args[1] && args[2] && setenv_check(pro_name, args[1], args[2]) == -1)
+				write(STDERR_FILENO, "Failed to set environment variable\n", 36);
+			continue;
+		}
+		else if (str_cpm(pro_name, "unsetenv") == 0)
+		{
+			if (args[1] && unsetenv_check(pro_name, args[1]) == -1)
+				write(STDERR_FILENO, "Failed to unset environment variable\n", 37);
 			continue;
 		}
 		if (env_cmd_check(cmd) == 0)
