@@ -1,10 +1,10 @@
 # simple_shell
 
-> [note]
- This project is not fully complete and is still awaiting new features to be added.
+> [Note]
+> This project is not fully complete and is still awaiting new features to be added.
 
 
- The original Unix operating system was designed and implemented by Ken Thompson, Dennis Ritchie, and others at AT&T's Bell Labs in the late 1960s. Ken Thompson also wrote the first version of the UNIX shell and invented the B programming language, which is the direct predecessor to C, later developed by Dennis Ritchie. Ken Thompson is a renowned computer scientist known for his contributions to Unix and programming languages, including the Go language.
+	The original Unix operating system was designed and implemented by Ken Thompson, Dennis Ritchie, and others at AT&T's Bell Labs in the late 1960s. Ken Thompson also wrote the first version of the UNIX shell and invented the B programming language, which is the direct predecessor to C, later developed by Dennis Ritchie. Ken Thompson is a renowned computer scientist known for his contributions to Unix and programming languages, including the Go language.
 
 ### The following sections summarize key concepts related to Unix operating systems and shell functionality:
 - **How does a shell work?** A shell serves as an interface between the user and the operating system, interpreting and executing commands.
@@ -19,23 +19,25 @@
 
 ## About: 
 
-This project implements a simple shell with various versions, each designed to build upon the last, enhancing functionality and usability. The primary features include:
+	This project implements a simple shell with various versions, each designed to build upon the last, enhancing functionality and usability. The primary features include:
 - **Input Handling:** The shell presents a prompt where you can enter commands and navigate the file system.
 - **Command Execution:** You can execute commands just like in a standard terminal. For example, typing `ls` will list files in the current directory.
 - **Built-in Commands:** The shell includes built-in commands such as:
-  - `ls /bin/ls` to view the details of the `ls` command.
-  - `env` to display the current environment variables.
-  - `set` to set new environment variables.
-  - `unset` to remove existing environment variables.
-  - `exit` to terminate the shell with a specified exit status.
+  - `ls , /bin/ls`: to view the details of the `ls` command.
+  - `env`: to display the current environment variables.
+  - `setenv [name] [value]`: to set new environment variables.
+  - `unsetenv [variable]`: to remove existing environment variables.
+  - `exit [status]`: to terminate the shell with a specified exit status.
 
-### Usage
+### Usage:
 
 To compile the shell, use the following command:
 
 ```bash
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh ```  
-(use the prompt10.c instead of all versions)
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
+```
+
+ (use the prompt10.c instead of all versions)
 After compilation, you can run the shell by executing ./hsh in your terminal. This will launch the simple shell where you can enter commands and explore its functionality.
 
 ## Different Versions of Simple Shell
