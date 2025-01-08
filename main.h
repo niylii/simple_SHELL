@@ -38,9 +38,14 @@ int env_exists(const char *name);
 char *get_env(const char *name);
 char *cmd_type(char *pro);
 
+/*for built-in commands**/
+int set_env(const char *name, const char *val, int exist);
+int unset_env(const char *name);
+
 /**for my version of std library functions**/
 ssize_t get_line(char **line, size_t *n, int fd);
 int a_to_i(char *);
+int is_space(const char *);
 
 /**for strings manupilation**/
 char *tokenize_pro_name(char **, char **);
