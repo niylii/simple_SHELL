@@ -42,9 +42,7 @@ char *tokenize_pro_name(char **str, char **args)
  * exec_process - function that handle the execution process
  * @cmd_path: the command path
  * @args: arguments with the command
- * @cmd: original command
  * @exec_stat: the execcution status
- * @pid: the process id
  */
 
 void exec_process(char *cmd_path, char **args, int *exec_stat)
@@ -73,13 +71,15 @@ void exec_process(char *cmd_path, char **args, int *exec_stat)
  * exit_cmd_check - is a function that checks if the command is
  *		the "exit" command
  * @cmd : the command to check
+ * @stat: the exit command's status
+ * Return: typical 0 -1.
  */
 int exit_cmd_check(char *cmd, char **stat)
 {
 	int ex_it, exit_stat = 0;
 
 	if (cmd == NULL)
-		return (0);
+		return (-1);
 	ex_it = str_cpm(cmd, "exit");
 	if (ex_it == 0)
 	{
