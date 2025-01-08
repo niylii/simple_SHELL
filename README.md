@@ -1,5 +1,73 @@
 # simple_shell
 
+> [note]
+ This project is not fully complete and is still awaiting new features to be added.
+
+
+ The original Unix operating system was designed and implemented by Ken Thompson, Dennis Ritchie, and others at AT&T's Bell Labs in the late 1960s. Ken Thompson also wrote the first version of the UNIX shell and invented the B programming language, which is the direct predecessor to C, later developed by Dennis Ritchie. Ken Thompson is a renowned computer scientist known for his contributions to Unix and programming languages, including the Go language.
+
+### The following sections summarize key concepts related to Unix operating systems and shell functionality:
+- **How does a shell work?** A shell serves as an interface between the user and the operating system, interpreting and executing commands.
+  
+- **What is a PID and a PPID?** A PID (Process ID) is a unique identifier for each process, while a PPID (Parent Process ID) identifies the parent process that created it.
+  
+- **How to manipulate the environment of the current process?** Use commands like `export`, `set`, and `unset` to modify environment variables.
+  
+- **What is the difference between a function and a system call?** A function is a reusable code block, while a system call requests the operating system to perform tasks.
+  
+- **How to create processes?** Use the `fork()` system call to create a new process by duplicating the calling process.
+
+## About: 
+
+This project implements a simple shell with various versions, each designed to build upon the last, enhancing functionality and usability. The primary features include:
+- **Input Handling:** The shell presents a prompt where you can enter commands and navigate the file system.
+- **Command Execution:** You can execute commands just like in a standard terminal. For example, typing `ls` will list files in the current directory.
+- **Built-in Commands:** The shell includes built-in commands such as:
+  - `ls /bin/ls` to view the details of the `ls` command.
+  - `env` to display the current environment variables.
+  - `set` to set new environment variables.
+  - `unset` to remove existing environment variables.
+  - `exit` to terminate the shell with a specified exit status.
+
+### Usage
+
+To compile the shell, use the following command:
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh ```  
+(use the prompt10.c instead of all versions)
+After compilation, you can run the shell by executing ./hsh in your terminal. This will launch the simple shell where you can enter commands and explore its functionality.
+
+## Different Versions of Simple Shell
+
+The project includes multiple versions of a simple shell, each enhancing functionality and features:
+
+| File Name             | Description                                      |
+|-----------------------|--------------------------------------------------|
+| `prompt01.c`         | Implementation of the first version of the simple shell. |
+| `prompt02.c`         | Implementation of the second version of the simple shell. |
+| `prompt03.c`         | Implementation of the third version of the simple shell. |
+| `prompt04.c`         | Implementation of the fourth version of the simple shell. |
+| `prompt10.c`         | **Simple Shell v1.0** - Final, ready to use implementation of the simple shell. |
+| `prompt011.c`        | Implementation of the eleventh version of the simple shell. |
+| `prompt021.c`        | Implementation of the second version of the prompt. |
+| `prompt041.c`        | Implementation of the fourth version of the prompt, with updates. |
+
+## File Descriptions
+
+| File Name             | Description                                      |
+|-----------------------|--------------------------------------------------|
+| `env_manip.c`        | Functions to manipulate every thing that has to do smtg with the environment variables. |
+| `get_line.c`         | Functions to read a line of input. (get_line stuff)                |
+| `main.c`             | Main program file containing the entry point.    |
+| `main.h`             | Header file containing function prototypes.      |
+| `operators.c`        | Functions implementing various operators.         |
+| `set_unset_env.c`    | Functions to set and unset environment variables. |
+| `sp_functions.c`     | Specialized functions for specila cases.    |
+| `str_functions.c`    | Core string manipulation functions.               |
+| `str_functions2.c`   | Additional string manipulation functions.        |
+| `strat/`             | Directory containing files (warm-ups for simple shell).             |
+
 > Shell Project Task Breakdown - 4 Week Schedule
 
 | **Week** | **Task Number** | **Task Name**                                   | **Time Estimate per Task** | **Status** | **Total Time Estimate** |
@@ -16,8 +84,8 @@
 |----------|------------------|-------------------------------------------------|----------------------------|------------|-------------------------|
 | Week 3  | 8                | No strtok                                       | 8-10 hours                 |  done          |                         |
 |          | 9                | Exit args                                       | 6-8 hours                  |   done       |                         |
-|          | 10               | setenv/unsetenv                                 | 10-15 hours                |   started        |                         |
-|          | 11               | cd built-in                                     | 15-20 hours                |            |                         |
+|          | 10               | setenv/unsetenv                                 | 10-15 hours                |   done       |                         |
+|          | 11               | cd built-in                                     | 15-20 hours                |   started         |                         |
 |          | 12               | Command separator                               | 8-10 hours                 |            | **~45 hours**          |
 |----------|------------------|-------------------------------------------------|----------------------------|------------|-------------------------|
 | Week 4  | 13               | Logical operators `&&` `II`                     | 10-15 hours                |            |                         |
@@ -28,21 +96,3 @@
 |----------|------------------|-------------------------------------------------|----------------------------|------------|-------------------------|
 |**Total**|                  |                                                 |                            |            | **~178 hours**       | 
 
-- [x] **Who designed and implemented the original Unix operating system?**
-- [x] **Who wrote the first version of the UNIX shell?**
-- [x] **Who invented the B programming language (the direct predecessor to the C programming language)?**
-- [x] **Who is Ken Thompson?**
-- [x] **How does a shell work?**
-- [x] **What is a PID and a PPID?**
-- [x] **How to manipulate the environment of the current process?**
-- [x] **What is the difference between a function and a system call?**
-- [x] **How to create processes?**
-- [x] **What are the three prototypes of main?**
-- [ ] **How does the shell use the PATH to find the programs?**
-- [x] **How to execute another program with the execve system call?**
-- [x] **How to suspend the execution of a process until one of its children terminates?**
-- [x] **What is EOF / “end-of-file”?**
-
-**EDGE CASES TO HANDLE or bugs idk:**
-- [x] space as command
-- [x] command after non existant command (fixed using forbidden function lol)
