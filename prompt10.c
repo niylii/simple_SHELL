@@ -17,11 +17,19 @@ void simple_shell10(void)
 	while (1)
 	{
 		write(STDIN_FILENO, "$ ", 2);
+		if (cmd)
+			free(cmd);
+		cmd = NULL;
 		cmd_stat = get_line(&cmd, &n, STDIN_FILENO);
 		getline_check(cmd_stat, cmd);
 		cmd = str_cspn(cmd);
 		pro_name = tokenize_pro_name(&cmd, args);
 		exit_cmd_check(cmd, args);
+		if (is_space(cmd) == 0)
+		{
+			write(STDERR_FILENO, "Invalid command: only whitespaces\n", 34);
+			continue;
+		}
 		if (env_cmd_check(cmd) == 0)
 			continue;
 		if (!cmd || cmd[0] == '\0')
