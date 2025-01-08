@@ -3,8 +3,7 @@
 > [Note]
 > This project is not fully complete and is still awaiting new features to be added.
 
-
-	The original Unix operating system was designed and implemented by Ken Thompson, Dennis Ritchie, and others at AT&T's Bell Labs in the late 1960s. Ken Thompson also wrote the first version of the UNIX shell and invented the B programming language, which is the direct predecessor to C, later developed by Dennis Ritchie. Ken Thompson is a renowned computer scientist known for his contributions to Unix and programming languages, including the Go language.
+      The original Unix operating system was designed and implemented by Ken Thompson, Dennis Ritchie, and others at AT&T's Bell Labs in the late 1960s. Ken Thompson also wrote the first version of the UNIX shell and invented the B programming language, which is the direct predecessor to C, later developed by Dennis Ritchie. Ken Thompson is a renowned computer scientist known for his contributions to Unix and programming languages, including the Go language.
 
 ### The following sections summarize key concepts related to Unix operating systems and shell functionality:
 - **How does a shell work?** A shell serves as an interface between the user and the operating system, interpreting and executing commands.
@@ -19,7 +18,7 @@
 
 ## About: 
 
-	This project implements a simple shell with various versions, each designed to build upon the last, enhancing functionality and usability. The primary features include:
+      This project implements a simple shell with various versions, each designed to build upon the last, enhancing functionality and usability. The primary features include:
 - **Input Handling:** The shell presents a prompt where you can enter commands and navigate the file system.
 - **Command Execution:** You can execute commands just like in a standard terminal. For example, typing `ls` will list files in the current directory.
 - **Built-in Commands:** The shell includes built-in commands such as:
