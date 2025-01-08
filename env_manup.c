@@ -49,11 +49,14 @@ char *cmd_type(char *pro)
 {
 	char *path;
 	char *current;
-	static char cmd_path[1024];
+	static char *cmd_path;
 
-	path = get_env("PATH");
+	cmd_path = malloc(1024);
+	if (!cmd_path)
+		return (NULL);
+	path = strdup(get_env("PATH"));
 	if (str_find(pro, '/'))
-		return ((access(pro, X_OK) == 0) ? pro : NULL);
+		return ((access(pro, X_OK) == 0) ? strdup(pro) : NULL);
 	if (!path)
 	{
 		write(STDERR_FILENO, "PATH is empty\n", 14);
@@ -67,6 +70,8 @@ char *cmd_type(char *pro)
 			return (cmd_path);
 		current = strtok(NULL, ":");
 	}
+	free(path);
+	free(cmd_path);
 	return (NULL);
 }
 
