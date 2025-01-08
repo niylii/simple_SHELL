@@ -30,7 +30,8 @@ char *tokenize_pro_name(char **str, char **args)
 	token = str_tok(*str, " ");
 	while (token)
 	{
-		args[i++] = token;
+		if (str_len(token) > 0)
+			args[i++] = token;
 		token = str_tok(NULL, " ");
 	}
 	args[i] = NULL;
