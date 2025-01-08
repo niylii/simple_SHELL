@@ -27,12 +27,11 @@ char *tokenize_pro_name(char **str, char **args)
 	char *token, *buff;
 	int i = 0;
 
-	token = str_tok(*str, " ");
-	while (token)
+	token = str_tok(*str, " \n");
+	while (token && i < 1024)
 	{
-		if (str_len(token) > 0)
-			args[i++] = token;
-		token = str_tok(NULL, " ");
+		args[i++] = token;
+		token = str_tok(NULL, " \n");
 	}
 	args[i] = NULL;
 	return (args[0]);
