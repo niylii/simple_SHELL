@@ -16,7 +16,7 @@
 |----------|------------------|-------------------------------------------------|----------------------------|------------|-------------------------|
 | Week 3  | 8                | No strtok                                       | 8-10 hours                 |  done          |                         |
 |          | 9                | Exit args                                       | 6-8 hours                  |   done       |                         |
-|          | 10               | setenv/unsetenv                                 | 10-15 hours                |            |                         |
+|          | 10               | setenv/unsetenv                                 | 10-15 hours                |   started        |                         |
 |          | 11               | cd built-in                                     | 15-20 hours                |            |                         |
 |          | 12               | Command separator                               | 8-10 hours                 |            | **~45 hours**          |
 |----------|------------------|-------------------------------------------------|----------------------------|------------|-------------------------|
@@ -44,5 +44,5 @@
 - [x] **What is EOF / “end-of-file”?**
 
 **EDGE CASES TO HANDLE or bugs idk:**
-- [ ] space as command
-- [ ] command after non existant command
+- [x] space as command
+- [x] command after non existant command (fixed using forbidden function lol)
