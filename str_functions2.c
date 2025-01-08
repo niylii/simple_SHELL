@@ -85,3 +85,24 @@ int a_to_i(char *str)
 	}
 	return (nb * sng);
 }
+
+/**
+ * is_space - function that tells if the argument is space
+ * @str: the argument to check
+ * Return: 0(success), -1(failure)
+ */
+int is_space(const char *str)
+{
+	int len, i;
+
+	if (!str || *str == '\0')
+		return (-1);
+	len = str_len((char *)str);
+	for (i = 0; i < len; i++)
+	{
+		if (str[i] != ' ' && str[i] != '\t' && str[i] != '\n' &&
+			str[i] != '\v' && str[i] != '\f' && str[i] != '\r')
+		return (-1);
+	}
+	return (0);
+}
