@@ -26,6 +26,8 @@ void simple_shell041(void);
 void getline_check(ssize_t stat, char *cmd);
 int exit_cmd_check(char *, char **);
 int env_cmd_check(char *);
+int setenv_check(char *cmd, char *name, char *val);
+int unsetenv_check(char *cmd, char *name);
 
 /**for certen cases**/
 void e_of(char *);
@@ -39,7 +41,7 @@ char *get_env(const char *name);
 char *cmd_type(char *pro);
 
 /*for built-in commands**/
-int set_env(const char *name, const char *val, int exist);
+int set_env(const char *name, const char *val);
 int unset_env(const char *name);
 
 /**for my version of std library functions**/
