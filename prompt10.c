@@ -25,6 +25,8 @@ void simple_shell10(void)
 		cmd = str_cspn(cmd);
 		pro_name = tokenize_pro_name(&cmd, args);
 		exit_cmd_check(cmd, args);
+		if (!cmd || cmd[0] == '\0')
+			continue;
 		if (is_space(cmd) == 0)
 		{
 			write(STDERR_FILENO, "Invalid command: only whitespaces\n", 34);
@@ -43,8 +45,6 @@ void simple_shell10(void)
 			continue;
 		}
 		if (env_cmd_check(cmd) == 0)
-			continue;
-		if (!cmd || cmd[0] == '\0')
 			continue;
 		cmd_path = cmd_type(pro_name);
 		if (cmd_path)
