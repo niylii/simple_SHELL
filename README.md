@@ -43,16 +43,16 @@ After compilation, you can run the shell by executing ./hsh in your terminal. Th
 
 The project includes multiple versions of a simple shell, each enhancing functionality and features:
 
-| File Name             | Description                                      |
-|-----------------------|--------------------------------------------------|
-| `prompt01.c`         | Implementation of the first version of the simple shell. |
-| `prompt02.c`         | Implementation of the second version of the simple shell. |
-| `prompt03.c`         | Implementation of the third version of the simple shell. |
-| `prompt04.c`         | Implementation of the fourth version of the simple shell. |
-| `prompt10.c`         | **Simple Shell v1.0** - Final, ready to use implementation of the simple shell. |
-| `prompt011.c`        | Implementation of the eleventh version of the simple shell. |
-| `prompt021.c`        | Implementation of the second version of the prompt. |
-| `prompt041.c`        | Implementation of the fourth version of the prompt, with updates. |
+| **File**        | **Description**                                                                                     |
+|------------------|-----------------------------------------------------------------------------------------------------|
+| `prompt01.c`     | Creates a basic UNIX command line interpreter that displays a prompt, accepts single-word commands, and handles errors, including "end of file" (Ctrl+D). |
+| `prompt02.c`     | Extends the shell to handle command lines with arguments.                                            |
+| `prompt03.c`     | Implements PATH handling for locating executable commands.                                           |
+| `prompt04.c`     | Implements the built-in `exit` command to terminate the shell.                                        |
+| **`prompt10.c`**     | Finalizes a ready-to-use implementation of the simple shell.                                         |
+| `prompt011.c`    | Used a custom `getline` function for input handling.                                             |
+| `prompt021.c`    | Used a custom `strtok` function for string tokenization.                                       |
+| `prompt041.c`    | Implements exit functionality that returns an exit status code.                                     |
 
 ## File Descriptions
 
@@ -67,6 +67,7 @@ The project includes multiple versions of a simple shell, each enhancing functio
 | `str_functions.c`    | Core string manipulation functions.               |
 | `str_functions2.c`   | Additional string manipulation functions.        |
 | `strat/`             | Directory containing files (warm-ups for simple shell).             |
+
 
 > Shell Project Task Breakdown - 4 Week Schedule
 
