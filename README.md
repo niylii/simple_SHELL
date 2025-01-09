@@ -22,7 +22,7 @@
 - **Input Handling:** The shell presents a prompt where you can enter commands and navigate the file system.
 - **Command Execution:** You can execute commands just like in a standard terminal. For example, typing `ls` will list files in the current directory.
 - **Built-in Commands:** The shell includes built-in commands such as:
-  - `ls , /bin/ls`: to view the details of the `ls` command.
+  - `ls , /bin/ls [arguments]`: to view the details of the `ls` command.
   - `env`: to display the current environment variables.
   - `setenv [name] [value]`: to set new environment variables.
   - `unsetenv [variable]`: to remove existing environment variables.
@@ -62,7 +62,6 @@ The project includes multiple versions of a simple shell, each enhancing functio
 | `get_line.c`         | Functions to read a line of input. (get_line stuff)                |
 | `main.c`             | Main program file containing the entry point.    |
 | `main.h`             | Header file containing function prototypes.      |
-| `operators.c`        | Functions implementing various operators.         |
 | `set_unset_env.c`    | Functions to set and unset environment variables. |
 | `sp_functions.c`     | Specialized functions for specila cases.    |
 | `str_functions.c`    | Core string manipulation functions.               |
@@ -86,7 +85,7 @@ The project includes multiple versions of a simple shell, each enhancing functio
 | Week 3  | 8                | No strtok                                       | 8-10 hours                 |  done          |                         |
 |          | 9                | Exit args                                       | 6-8 hours                  |   done       |                         |
 |          | 10               | setenv/unsetenv                                 | 10-15 hours                |   done       |                         |
-|          | 11               | cd built-in                                     | 15-20 hours                |   started         |                         |
+|          | 11               | cd built-in                                     | 15-20 hours                |           |                         |
 |          | 12               | Command separator                               | 8-10 hours                 |            | **~45 hours**          |
 |----------|------------------|-------------------------------------------------|----------------------------|------------|-------------------------|
 | Week 4  | 13               | Logical operators `&&` `II`                     | 10-15 hours                |            |                         |
@@ -95,5 +94,5 @@ The project includes multiple versions of a simple shell, each enhancing functio
 |          | 16               | Comments                                        | 4-6 hours                  |            |                         |
 |          | 17               | File input                                      | 6-10 hours                 |            | **~40 hours**          |
 |----------|------------------|-------------------------------------------------|----------------------------|------------|-------------------------|
-|**Total**|                  |                                                 |                            |            | **~178 hours**       | 
-
+|**Total**|                  |                                                 |                            |   i         | **~178 hours**       | 
+* **This project is posed for the momemnt.**
