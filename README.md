@@ -1,6 +1,6 @@
 # simple_shell
 
-> [Note]
+> Note
 > This project is not fully complete and is still awaiting new features to be added.
 
       The original Unix operating system was designed and implemented by Ken Thompson, Dennis Ritchie, and others at AT&T's Bell Labs in the late 1960s. Ken Thompson also wrote the first version of the UNIX shell and invented the B programming language, which is the direct predecessor to C, later developed by Dennis Ritchie. Ken Thompson is a renowned computer scientist known for his contributions to Unix and programming languages, including the Go language.
